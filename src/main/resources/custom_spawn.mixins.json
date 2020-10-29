@@ -12,7 +12,8 @@
     "MixinWaterCreatureEntity",
     "MixinAmbientEntity",
     "MixinHorseBaseEntity",
-    "MixinPigEntity"
+    "MixinPigEntity",
+    "MixinTameableEntity"
   ],
   "client": [
     "MixinMinecraftClient"
