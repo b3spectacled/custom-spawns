@@ -15,8 +15,8 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class CustomSpawn implements ModInitializer {
-    public static final String ID = "custom_stars";
-    public static final Logger LOGGER = LogManager.getLogger("CustomStars");
+    public static final String ID = "custom_spawns";
+    public static final Logger LOGGER = LogManager.getLogger("CustomSpawns");
     public static final CustomSpawnConfig SPAWNS_CONFIG = AutoConfig
             .register(CustomSpawnConfig.class, GsonConfigSerializer::new).getConfig();
 
