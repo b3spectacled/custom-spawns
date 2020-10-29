@@ -16,13 +16,6 @@ import net.minecraft.nbt.CompoundTag;
 
 @Mixin(AnimalEntity.class)
 public class MixinAnimalEntity {
-
-    /*
-    @Shadow
-    public boolean canImmediatelyDespawn(double distance) {
-        System.out.println("Checking despawn");
-        return false;
-    }*/
     
     @Inject(method = "canImmediatelyDespawn", at = @At("HEAD"), cancellable = true)
     private void injectDespawn(double distance, CallbackInfoReturnable info) {

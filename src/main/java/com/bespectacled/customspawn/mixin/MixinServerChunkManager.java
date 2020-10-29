@@ -2,9 +2,6 @@ package com.bespectacled.customspawn.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.Constant;
-import org.spongepowered.asm.mixin.injection.ModifyConstant;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 import com.bespectacled.customspawn.CustomSpawn;
@@ -13,7 +10,6 @@ import org.spongepowered.asm.mixin.injection.At;
 
 import net.minecraft.server.world.ServerChunkManager;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.Tickable;
 import net.minecraft.world.SpawnHelper;
 import net.minecraft.world.WorldProperties;
 import net.minecraft.world.chunk.WorldChunk;
