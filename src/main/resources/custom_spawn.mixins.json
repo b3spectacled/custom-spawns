@@ -10,7 +10,9 @@
     "MixinChickenEntity",
     "MixinHostileEntity",
     "MixinWaterCreatureEntity",
-    "MixinAmbientEntity"
+    "MixinAmbientEntity",
+    "MixinHorseBaseEntity",
+    "MixinPigEntity"
   ],
   "client": [
     "MixinMinecraftClient"
