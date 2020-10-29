@@ -1,0 +1,20 @@
+package com.bespectacled.customspawn.mixin;
+
+import org.spongepowered.asm.mixin.Mixin;
+
+import com.bespectacled.customspawn.CustomSpawn;
+
+import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.MobEntity;
+
+@Mixin(HostileEntity.class)
+public abstract class MixinHostileEntity extends MobEntity {
+    protected MixinHostileEntity() {
+        super(null, null);
+    }
+
+    @Override
+    public boolean canImmediatelyDespawn(double distance) {
+        return !CustomSpawn.SPAWNS_CONFIG.hostilePersistent;
+    }
+}

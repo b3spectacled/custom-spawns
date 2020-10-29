@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.bespectacled.customspawn.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinServerChunkManager",
+    "MixinSpawnHelperInfo",
+    "MixinAnimalEntity",
+    "MixinChickenEntity",
+    "MixinHostileEntity",
+    "MixinWaterCreatureEntity",
+    "MixinAmbientEntity"
+  ],
+  "client": [
+    "MixinMinecraftClient"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

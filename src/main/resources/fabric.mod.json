@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "modid",
+  "version": "${version}",
+
+  "name": "Custom Spawns",
+  "description": "Simple configurable mob spawning.",
+  "authors": [
+    "B3spectacled"
+  ],
+  "contact": {
+    "homepage": "https://github.com/b3spectacled/",
+    "sources": "https://github.com/b3spectacled/custom-spawn"
+  },
+
+  "license": "LGPLv3",
+  "icon": "assets/customspawn/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.bespectacled.customspawn.CustomSpawn"
+    ],
+    "modmenu": [
+      "com.bespectacled.customspawn.config.CustomSpawnModMenu"
+    ]
+  },
+  "mixins": [
+    "custom_spawn.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
