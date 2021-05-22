@@ -6,18 +6,18 @@
   "mixins": [
     "MixinServerChunkManager",
     "MixinSpawnHelperInfo",
-    "MixinAnimalEntity",
-    "MixinChickenEntity",
-    "MixinHostileEntity",
-    "MixinWaterCreatureEntity",
-    "MixinAmbientEntity",
-    "MixinHorseBaseEntity",
-    "MixinPigEntity",
-    "MixinTameableEntity"
+    "MixinMobSpawnerLogic",
+    
+    "entity.MixinAnimalEntity",
+    "entity.MixinChickenEntity",
+    "entity.MixinHostileEntity",
+    "entity.MixinWaterCreatureEntity",
+    "entity.MixinAmbientEntity",
+    "entity.MixinHorseBaseEntity",
+    "entity.MixinPigEntity",
+    "entity.MixinTameableEntity"
   ],
-  "client": [
-    "MixinMinecraftClient"
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }

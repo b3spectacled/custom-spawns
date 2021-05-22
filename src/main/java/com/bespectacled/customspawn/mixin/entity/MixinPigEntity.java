@@ -1,8 +1,7 @@
-package com.bespectacled.customspawn.mixin;
+package com.bespectacled.customspawn.mixin.entity;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
 import com.bespectacled.customspawn.CustomSpawn;
 
 import net.minecraft.entity.mob.MobEntity;
@@ -17,15 +16,10 @@ public class MixinPigEntity extends MobEntity {
     protected MixinPigEntity() {
         super(null, null);
     }
-    
-    @Unique
-    private boolean isSaddled() {
-        return saddledComponent.isSaddled();
-    }
 
     @Override
     public boolean canImmediatelyDespawn(double distance) {
-        return !(CustomSpawn.SPAWNS_CONFIG.passivePersistent || this.isSaddled());
+        return !(CustomSpawn.SPAWNS_CONFIG.passivePersistent || this.saddledComponent.isSaddled());
     }
     
 }

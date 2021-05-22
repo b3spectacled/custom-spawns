@@ -1,8 +1,8 @@
 package com.bespectacled.customspawn.config;
 
-import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import net.minecraft.entity.SpawnGroup;
 
 @Config(name = "customspawn")
@@ -42,4 +42,26 @@ public class CustomSpawnConfig implements ConfigData {
     
     @ConfigEntry.Category(value = "persistence")
     public boolean waterPersistent = false;
+    
+    @ConfigEntry.Category(value = "spawners")
+    public boolean overrideSpawnerDefaultValues = false;
+    
+    @ConfigEntry.Category(value = "spawners")
+    public int minSpawnDelay = 200;
+    
+    @ConfigEntry.Category(value = "spawners")
+    public int maxSpawnDelay = 800;
+    
+    @ConfigEntry.Category(value = "spawners")
+    public int spawnCount = 4;
+    
+    @ConfigEntry.Category(value = "spawners")
+    public int maxNearbyEntities = 6;
+    
+    @ConfigEntry.Category(value = "spawners")
+    public int requiredPlayerRange = 16;
+    
+    @ConfigEntry.Category(value = "spawners")
+    public int spawnRange = 4;
+    
 }

@@ -1,5 +1,6 @@
 package com.bespectacled.customspawn.mixin;
 
+import org.spongepowered.asm.mixin.Dynamic;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -16,12 +17,10 @@ import net.minecraft.world.chunk.WorldChunk;
 
 @Mixin(ServerChunkManager.class)
 public class MixinServerChunkManager {
-    @Shadow
-    private boolean spawnAnimals;
+    @Shadow private boolean spawnAnimals;
+    @Shadow private ServerWorld world;
     
-    @Shadow
-    private ServerWorld world;
-    
+    @Dynamic("SpawnHelper lambda method")
     @Redirect(
         method = "method_20801",
         at = @At(
@@ -35,7 +34,4 @@ public class MixinServerChunkManager {
         
         SpawnHelper.spawn(serverWorld, chunk, info, spawnAnimals, spawnMonsters, shouldSpawnAnimals);
     }
-
-   
-    
 }

@@ -3,6 +3,7 @@
     "text.autoconfig.customspawn.category.general": "General",
     "text.autoconfig.customspawn.category.mobCaps": "Mob Caps",
     "text.autoconfig.customspawn.category.persistence": "Mob Persistence",
+    "text.autoconfig.customspawn.category.spawners": "Mob Spawners",
     
     "text.autoconfig.customspawn.option.chunkConstant.@PrefixText": "Note: Actual Mob Cap = Mob Cap * Chunks / (Chunk Constant ^ 2)",
     "text.autoconfig.customspawn.option.chunkConstant": "Spawn Chunk Constant",
@@ -18,5 +19,13 @@
     "text.autoconfig.customspawn.option.passivePersistent": "Passive Mob Persistence",
     "text.autoconfig.customspawn.option.hostilePersistent": "Hostile Mob Persistence",
     "text.autoconfig.customspawn.option.ambientPersistent": "Ambient Mob Persistence",
-    "text.autoconfig.customspawn.option.waterPersistent": "Water Mob Persistence"
+    "text.autoconfig.customspawn.option.waterPersistent": "Water Mob Persistence",
+    
+    "text.autoconfig.customspawn.option.overrideSpawnerDefaultValues": "Override Mob Spawner Default Values",
+    "text.autoconfig.customspawn.option.minSpawnDelay": "Min Spawn Delay (Ticks)",
+    "text.autoconfig.customspawn.option.maxSpawnDelay": "Max Spawn Delay (Ticks)",
+    "text.autoconfig.customspawn.option.spawnCount": "Spawn Count",
+    "text.autoconfig.customspawn.option.maxNearbyEntities": "Max Nearby Entities",
+    "text.autoconfig.customspawn.option.requiredPlayerRange": "Required Player Range",
+    "text.autoconfig.customspawn.option.spawnRange": "Spawn Range"
 }

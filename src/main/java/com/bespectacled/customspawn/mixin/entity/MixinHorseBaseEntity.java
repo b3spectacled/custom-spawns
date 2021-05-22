@@ -1,4 +1,4 @@
-package com.bespectacled.customspawn.mixin;
+package com.bespectacled.customspawn.mixin.entity;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
