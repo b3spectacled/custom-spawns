@@ -27,7 +27,7 @@ public class MixinMobSpawnerLogic {
     @Shadow private int requiredPlayerRange;
     @Shadow private int spawnRange;
     
-    @Inject(method = "update", at = @At("HEAD")) 
+    @Inject(method = "serverTick", at = @At("HEAD")) 
     private void injectUpdate(CallbackInfo info) {
         if (CustomSpawn.SPAWNS_CONFIG.overrideSpawnerDefaultValues) {
             this.minSpawnDelay = CustomSpawn.SPAWNS_CONFIG.minSpawnDelay;

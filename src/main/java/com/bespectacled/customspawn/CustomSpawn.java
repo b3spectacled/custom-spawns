@@ -11,7 +11,7 @@ import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 
 public class CustomSpawn implements ModInitializer {
-    public static final String ID = "custom_spawns";
+    public static final String MOD_ID = "custom_spawns";
     public static final Logger LOGGER = LogManager.getLogger("CustomSpawns");
     public static final CustomSpawnConfig SPAWNS_CONFIG = AutoConfig.register(CustomSpawnConfig.class, GsonConfigSerializer::new).getConfig();
 
