@@ -13,7 +13,7 @@
     "sources": "https://github.com/b3spectacled/custom-spawn"
   },
 
-  "license": "LGPLv3",
+  "license": "MIT",
   "icon": "assets/customspawn/icon.png",
 
   "environment": "*",
