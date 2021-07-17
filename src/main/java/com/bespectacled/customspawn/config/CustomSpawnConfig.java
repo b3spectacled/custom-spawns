@@ -14,6 +14,10 @@ public class CustomSpawnConfig implements ConfigData {
     
     @ConfigEntry.Category(value = "general")
     public long passiveTicksToWait = 400L;
+    
+    @ConfigEntry.Category(value = "general")
+    @ConfigEntry.Gui.Tooltip(count = 2)
+    public boolean hostileSpawning1_18 = false;
 
     @ConfigEntry.Gui.PrefixText
     @ConfigEntry.Category(value = "mobCaps")

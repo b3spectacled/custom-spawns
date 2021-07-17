@@ -8,6 +8,9 @@
     "text.autoconfig.customspawn.option.chunkConstant.@PrefixText": "Note: Actual Mob Cap = Mob Cap * Chunks / (Chunk Constant ^ 2)",
     "text.autoconfig.customspawn.option.chunkConstant": "Spawn Chunk Constant",
     "text.autoconfig.customspawn.option.passiveTicksToWait": "Ticks between Passive Spawns",
+    "text.autoconfig.customspawn.option.hostileSpawning1_18": "Experimental 1.18 Hostile Spawning",
+    "text.autoconfig.customspawn.option.hostileSpawning1_18.@Tooltip[0]": "Enable 1.18 experimental snapshot hostile spawn behavior.",
+    "text.autoconfig.customspawn.option.hostileSpawning1_18.@Tooltip[1]": "Hostile mobs will no longer spawn if block light is above 0.",
     
     "text.autoconfig.customspawn.option.passiveCap.@PrefixText": "Note: Actual Mob Cap = Mob Cap * Chunks / (Chunk Constant ^ 2)",
     "text.autoconfig.customspawn.option.passiveCap": "Passive Mob Cap",
