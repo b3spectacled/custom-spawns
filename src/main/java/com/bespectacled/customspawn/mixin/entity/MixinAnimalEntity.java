@@ -11,12 +11,8 @@ import net.minecraft.entity.passive.AnimalEntity;
 
 @Mixin(AnimalEntity.class)
 public class MixinAnimalEntity {
-    
     @Inject(method = "canImmediatelyDespawn", at = @At("HEAD"), cancellable = true)
     private void injectDespawn(double distance, CallbackInfoReturnable<Boolean> info) {
         info.setReturnValue(!CustomSpawn.SPAWNS_CONFIG.passivePersistent);
     }
-    
-
-    
 }

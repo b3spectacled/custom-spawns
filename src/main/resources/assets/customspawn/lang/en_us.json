@@ -18,6 +18,7 @@
     "text.autoconfig.customspawn.option.ambientCap": "Ambient Mob Cap",
     "text.autoconfig.customspawn.option.waterCap": "Water Mob Cap",
     "text.autoconfig.customspawn.option.waterAmbientCap": "Ambient Water Mob Cap",
+    "text.autoconfig.customspawn.option.undergroundWaterCap": "Underground Water Mob Cap",
     
     "text.autoconfig.customspawn.option.passivePersistent": "Passive Mob Persistence",
     "text.autoconfig.customspawn.option.hostilePersistent": "Hostile Mob Persistence",

@@ -47,5 +47,6 @@ public abstract class MixinSpawnHelperInfo {
         SPAWN_CAPS.put(SpawnGroup.AMBIENT, () -> CustomSpawn.SPAWNS_CONFIG.ambientCap);
         SPAWN_CAPS.put(SpawnGroup.WATER_CREATURE, () -> CustomSpawn.SPAWNS_CONFIG.waterCap);
         SPAWN_CAPS.put(SpawnGroup.WATER_AMBIENT, () -> CustomSpawn.SPAWNS_CONFIG.waterAmbientCap);
+        SPAWN_CAPS.put(SpawnGroup.UNDERGROUND_WATER_CREATURE, () -> CustomSpawn.SPAWNS_CONFIG.undergroundWaterCap);
     }
 }

@@ -35,6 +35,9 @@ public class CustomSpawnConfig implements ConfigData {
     @ConfigEntry.Category(value = "mobCaps")
     public int waterAmbientCap = SpawnGroup.WATER_AMBIENT.getCapacity();
     
+    @ConfigEntry.Category(value = "mobCaps")
+    public int undergroundWaterCap = SpawnGroup.UNDERGROUND_WATER_CREATURE.getCapacity();
+    
     @ConfigEntry.Category(value = "persistence")
     public boolean passivePersistent = true;
     
