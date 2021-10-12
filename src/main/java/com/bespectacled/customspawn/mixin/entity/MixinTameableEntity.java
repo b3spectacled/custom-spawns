@@ -2,6 +2,7 @@ package com.bespectacled.customspawn.mixin.entity;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+
 import com.bespectacled.customspawn.CustomSpawn;
 
 import net.minecraft.entity.data.TrackedData;

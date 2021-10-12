@@ -3,40 +3,43 @@ package com.bespectacled.customspawn.config;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
-import net.minecraft.entity.SpawnGroup;
 
 @Config(name = "customspawn")
 public class CustomSpawnConfig implements ConfigData {
-    
     @ConfigEntry.Gui.PrefixText
     @ConfigEntry.Category(value = "general")
     public int chunkConstant = 17;
     
     @ConfigEntry.Category(value = "general")
-    public long passiveTicksToWait = 400L;
+    public long rareSpawnTicksToWait = 400L;
     
     @ConfigEntry.Category(value = "general")
     @ConfigEntry.Gui.Tooltip(count = 2)
     public boolean hostileSpawning1_18 = false;
-
-    @ConfigEntry.Gui.PrefixText
-    @ConfigEntry.Category(value = "mobCaps")
-    public int passiveCap = SpawnGroup.CREATURE.getCapacity();
     
-    @ConfigEntry.Category(value = "mobCaps")
-    public int hostileCap = SpawnGroup.MONSTER.getCapacity();
+    @ConfigEntry.Category(value = "mobGroups")
+    @ConfigEntry.Gui.CollapsibleObject
+    public CustomSpawnGroup monsterGroup = new CustomSpawnGroup(70, false, false, 128, 32);
     
-    @ConfigEntry.Category(value = "mobCaps")
-    public int ambientCap = SpawnGroup.AMBIENT.getCapacity();
+    @ConfigEntry.Category(value = "mobGroups")
+    @ConfigEntry.Gui.CollapsibleObject
+    public CustomSpawnGroup creatureGroup = new CustomSpawnGroup(10, true, true, 128, 32);
     
-    @ConfigEntry.Category(value = "mobCaps")
-    public int waterCap = SpawnGroup.WATER_CREATURE.getCapacity();
+    @ConfigEntry.Category(value = "mobGroups")
+    @ConfigEntry.Gui.CollapsibleObject
+    public CustomSpawnGroup ambientGroup = new CustomSpawnGroup(15, true, false, 128, 32);
     
-    @ConfigEntry.Category(value = "mobCaps")
-    public int waterAmbientCap = SpawnGroup.WATER_AMBIENT.getCapacity();
+    @ConfigEntry.Category(value = "mobGroups")
+    @ConfigEntry.Gui.CollapsibleObject
+    public CustomSpawnGroup waterCreatureGroup = new CustomSpawnGroup(5, true, false, 128, 32);
     
-    @ConfigEntry.Category(value = "mobCaps")
-    public int undergroundWaterCap = SpawnGroup.UNDERGROUND_WATER_CREATURE.getCapacity();
+    @ConfigEntry.Category(value = "mobGroups")
+    @ConfigEntry.Gui.CollapsibleObject
+    public CustomSpawnGroup waterAmbientGroup = new CustomSpawnGroup(20, true, false, 64, 32);
+    
+    @ConfigEntry.Category(value = "mobGroups")
+    @ConfigEntry.Gui.CollapsibleObject
+    public CustomSpawnGroup undergroundWaterGroup = new CustomSpawnGroup(5, true, false, 128, 32);
     
     @ConfigEntry.Category(value = "persistence")
     public boolean passivePersistent = true;
@@ -71,4 +74,26 @@ public class CustomSpawnConfig implements ConfigData {
     @ConfigEntry.Category(value = "spawners")
     public int spawnRange = 4;
     
+    public static class CustomSpawnGroup {
+        public int capacity;
+        public boolean peaceful;
+        public boolean rare;
+        public int immediateDespawnRange;
+        public int despawnStartRange;
+        
+        public CustomSpawnGroup(
+            int capacity, 
+            boolean peaceful, 
+            boolean rare, 
+            int immediateDespawnRange, 
+            int despawnStartRange
+        ) {
+            this.capacity = capacity;
+            this.peaceful = peaceful;
+            this.rare = rare;
+            this.immediateDespawnRange = immediateDespawnRange;
+            this.despawnStartRange = despawnStartRange;
+        }
+    }
+
 }

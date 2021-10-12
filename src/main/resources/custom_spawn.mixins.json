@@ -7,6 +7,7 @@
     "MixinServerChunkManager",
     "MixinSpawnHelperInfo",
     "MixinMobSpawnerLogic",
+    "MixinSpawnGroup",
     
     "entity.MixinAnimalEntity",
     "entity.MixinChickenEntity",
