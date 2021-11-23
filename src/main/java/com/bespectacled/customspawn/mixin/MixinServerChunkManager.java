@@ -3,11 +3,10 @@ package com.bespectacled.customspawn.mixin;
 import org.spongepowered.asm.mixin.Dynamic;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 import com.bespectacled.customspawn.CustomSpawn;
-
-import org.spongepowered.asm.mixin.injection.At;
 
 import net.minecraft.server.world.ServerChunkManager;
 import net.minecraft.server.world.ServerWorld;
@@ -28,10 +27,10 @@ public class MixinServerChunkManager {
             target = "Lnet/minecraft/world/SpawnHelper;spawn(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/chunk/WorldChunk;Lnet/minecraft/world/SpawnHelper$Info;ZZZ)V"
         )
     )
-    private void injectSpawn(ServerWorld serverWorld, WorldChunk chunk, SpawnHelper.Info info, boolean spawnAnimals, boolean spawnMonsters, boolean shouldSpawnAnimals) {
+    private void injectSpawn(ServerWorld serverWorld, WorldChunk chunk, SpawnHelper.Info info, boolean spawnAnimals, boolean spawnMonsters, boolean rareSpawn) {
         WorldProperties worldProps = this.world.getLevelProperties();
-        shouldSpawnAnimals = worldProps.getTime() % CustomSpawn.SPAWNS_CONFIG.passiveTicksToWait == 0L;
+        rareSpawn = worldProps.getTime() % CustomSpawn.SPAWNS_CONFIG.rareSpawnTicksToWait == 0L;
         
-        SpawnHelper.spawn(serverWorld, chunk, info, spawnAnimals, spawnMonsters, shouldSpawnAnimals);
+        SpawnHelper.spawn(serverWorld, chunk, info, spawnAnimals, spawnMonsters, rareSpawn);
     }
 }
