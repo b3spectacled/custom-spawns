@@ -13,10 +13,6 @@ public class CustomSpawnConfig implements ConfigData {
     @ConfigEntry.Category(value = "general")
     public long rareSpawnTicksToWait = 400L;
     
-    @ConfigEntry.Category(value = "general")
-    @ConfigEntry.Gui.Tooltip(count = 2)
-    public boolean hostileSpawning1_18 = false;
-    
     @ConfigEntry.Category(value = "mobGroups")
     @ConfigEntry.Gui.CollapsibleObject
     public CustomSpawnGroup monsterGroup = new CustomSpawnGroup(70, false, false, 128, 32);
@@ -28,6 +24,10 @@ public class CustomSpawnConfig implements ConfigData {
     @ConfigEntry.Category(value = "mobGroups")
     @ConfigEntry.Gui.CollapsibleObject
     public CustomSpawnGroup ambientGroup = new CustomSpawnGroup(15, true, false, 128, 32);
+    
+    @ConfigEntry.Category(value = "mobGroups")
+    @ConfigEntry.Gui.CollapsibleObject
+    public CustomSpawnGroup axolotlGroup = new CustomSpawnGroup(5, true, false, 128, 32);
     
     @ConfigEntry.Category(value = "mobGroups")
     @ConfigEntry.Gui.CollapsibleObject

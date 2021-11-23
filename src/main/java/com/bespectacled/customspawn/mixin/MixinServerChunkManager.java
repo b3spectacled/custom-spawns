@@ -1,6 +1,5 @@
 package com.bespectacled.customspawn.mixin;
 
-import org.spongepowered.asm.mixin.Dynamic;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -19,9 +18,8 @@ public class MixinServerChunkManager {
     @Shadow private boolean spawnAnimals;
     @Shadow private ServerWorld world;
     
-    @Dynamic("SpawnHelper lambda method")
     @Redirect(
-        method = "method_20801",
+        method = "tickChunks",
         at = @At(
             value = "INVOKE", 
             target = "Lnet/minecraft/world/SpawnHelper;spawn(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/chunk/WorldChunk;Lnet/minecraft/world/SpawnHelper$Info;ZZZ)V"

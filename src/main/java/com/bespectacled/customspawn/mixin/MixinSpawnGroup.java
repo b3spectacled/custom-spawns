@@ -78,6 +78,7 @@ public class MixinSpawnGroup {
         CUSTOM_SPAWN_GROUPS.put(SpawnGroup.MONSTER.getName(), CustomSpawn.SPAWNS_CONFIG.monsterGroup);
         CUSTOM_SPAWN_GROUPS.put(SpawnGroup.CREATURE.getName(), CustomSpawn.SPAWNS_CONFIG.creatureGroup);
         CUSTOM_SPAWN_GROUPS.put(SpawnGroup.AMBIENT.getName(), CustomSpawn.SPAWNS_CONFIG.ambientGroup);
+        CUSTOM_SPAWN_GROUPS.put(SpawnGroup.AXOLOTLS.getName(), CustomSpawn.SPAWNS_CONFIG.axolotlGroup);
         CUSTOM_SPAWN_GROUPS.put(SpawnGroup.WATER_CREATURE.getName(), CustomSpawn.SPAWNS_CONFIG.waterCreatureGroup);
         CUSTOM_SPAWN_GROUPS.put(SpawnGroup.WATER_AMBIENT.getName(), CustomSpawn.SPAWNS_CONFIG.waterAmbientGroup);
         CUSTOM_SPAWN_GROUPS.put(SpawnGroup.UNDERGROUND_WATER_CREATURE.getName(), CustomSpawn.SPAWNS_CONFIG.waterCreatureGroup);
