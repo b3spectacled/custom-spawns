@@ -49,6 +49,7 @@ public class CustomSpawnConfig implements ConfigData {
     @ConfigEntry.Category(value = "persistence")
     public boolean waterPersistent = false;
     
+    @ConfigEntry.Gui.PrefixText
     @ConfigEntry.Category(value = "spawners")
     public boolean overrideSpawnerDefaultValues = false;
     
