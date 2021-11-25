@@ -59,7 +59,7 @@
     "text.autoconfig.customspawn.option.ambientPersistent": "Ambient Mob Persistence",
     "text.autoconfig.customspawn.option.waterPersistent": "Water Mob Persistence",
     
-    "text.autoconfig.customspawn.option.overrideSpawnerDefaultValues": "Override Mob Spawner Default Values",
+    "text.autoconfig.customspawn.option.overrideSpawnerDefaultValues": "Override Mob Spawner Default Values (Requires world reload)",
     "text.autoconfig.customspawn.option.minSpawnDelay": "Min Spawn Delay (Ticks)",
     "text.autoconfig.customspawn.option.maxSpawnDelay": "Max Spawn Delay (Ticks)",
     "text.autoconfig.customspawn.option.spawnCount": "Spawn Count",
