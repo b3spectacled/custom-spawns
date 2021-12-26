@@ -1,8 +1,11 @@
 package com.bespectacled.customspawn.config;
 
+import java.util.List;
+
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
+import net.minecraft.entity.SpawnGroup;
 
 @Config(name = "customspawn")
 public class CustomSpawnConfig implements ConfigData {
@@ -54,6 +57,14 @@ public class CustomSpawnConfig implements ConfigData {
     public boolean waterPersistent = false;
     
     @ConfigEntry.Gui.PrefixText
+    @ConfigEntry.Category(value = "mobSpawnAdditions")
+    public List<CustomSpawnAddition> mobSpawnAdditions = List.of();
+    
+    @ConfigEntry.Gui.PrefixText
+    @ConfigEntry.Category(value = "mobSpawnRemovals")
+    public List<CustomSpawnRemoval> mobSpawnRemovals = List.of();
+    
+    @ConfigEntry.Gui.PrefixText
     @ConfigEntry.Category(value = "spawners")
     public boolean overrideSpawnerDefaultValues = false;
     
@@ -96,5 +107,32 @@ public class CustomSpawnConfig implements ConfigData {
             this.despawnStartRange = despawnStartRange;
         }
     }
-
+    
+    public static class CustomSpawnAddition {
+        public String biomeId;
+        public String mobId;
+        public SpawnGroup spawnGroup;
+        public int weight;
+        public int minCount;
+        public int maxCount;
+        
+        public CustomSpawnAddition() {
+            this.biomeId = "minecraft:plains";
+            this.mobId = "minecraft:pig";
+            this.spawnGroup = SpawnGroup.CREATURE;
+            this.weight = 10;
+            this.minCount = 4;
+            this.maxCount = 4;
+        }
+    }
+    
+    public static class CustomSpawnRemoval {
+        public String biomeId;
+        public String mobId;
+        
+        public CustomSpawnRemoval() {
+            this.biomeId = "minecraft:plains";
+            this.mobId = "minecraft:pig";
+        }
+    }
 }
