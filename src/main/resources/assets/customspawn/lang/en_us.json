@@ -3,6 +3,8 @@
     "text.autoconfig.customspawn.category.general": "General",
     "text.autoconfig.customspawn.category.mobGroups": "Mob Groups",
     "text.autoconfig.customspawn.category.persistence": "Mob Persistence",
+    "text.autoconfig.customspawn.category.mobSpawnAdditions": "Mob Additions",
+    "text.autoconfig.customspawn.category.mobSpawnRemovals": "Mob Removals",
     "text.autoconfig.customspawn.category.spawners": "Mob Spawners",
     
     "text.autoconfig.customspawn.option.chunkConstant.@PrefixText": "Actual Mob Cap = Mob Cap * Chunks / (Chunk Constant ^ 2)",
@@ -61,6 +63,22 @@
     "text.autoconfig.customspawn.option.hostilePersistent": "Hostile Mob Persistence",
     "text.autoconfig.customspawn.option.ambientPersistent": "Ambient Mob Persistence",
     "text.autoconfig.customspawn.option.waterPersistent": "Water Mob Persistence",
+    
+    "text.autoconfig.customspawn.option.mobSpawnAdditions": "Mob Additions",
+    "text.autoconfig.customspawn.option.mobSpawnAdditions.@PrefixText": "Changes require game restart.",
+    "text.autoconfig.customspawn.option.CustomSpawnAddition": "Mob Addition",
+    "text.autoconfig.customspawn.option.CustomSpawnAddition.biomeId": "Biome ID",
+    "text.autoconfig.customspawn.option.CustomSpawnAddition.spawnGroup": "Spawn Group",
+    "text.autoconfig.customspawn.option.CustomSpawnAddition.mobId": "Mob ID",
+    "text.autoconfig.customspawn.option.CustomSpawnAddition.weight": "Weight",
+    "text.autoconfig.customspawn.option.CustomSpawnAddition.minCount": "Min Count",
+    "text.autoconfig.customspawn.option.CustomSpawnAddition.maxCount": "Max Count",
+    
+    "text.autoconfig.customspawn.option.mobSpawnRemovals": "Mob Removals",
+    "text.autoconfig.customspawn.option.mobSpawnRemovals.@PrefixText": "Changes require game restart.",
+    "text.autoconfig.customspawn.option.CustomSpawnRemoval": "Mob Removal",
+    "text.autoconfig.customspawn.option.CustomSpawnRemoval.biomeId": "Biome ID",
+    "text.autoconfig.customspawn.option.CustomSpawnRemoval.mobId": "Mob ID",
     
     "text.autoconfig.customspawn.option.overrideSpawnerDefaultValues.@PrefixText": "Changes require world reload.",
     "text.autoconfig.customspawn.option.overrideSpawnerDefaultValues": "Override Mob Spawner Default Values",

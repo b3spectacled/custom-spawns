@@ -9,6 +9,7 @@ import com.bespectacled.customspawn.config.CustomSpawnConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.Identifier;
 
 public class CustomSpawn implements ModInitializer {
     public static final String MOD_ID = "custom_spawns";
@@ -22,8 +23,15 @@ public class CustomSpawn implements ModInitializer {
         LOGGER.log(level, "[" + MOD_NAME + "] {}", message);
     }
     
+    public static Identifier createId(String name) {
+        return new Identifier(MOD_ID, name);
+    }
+    
     @Override
     public void onInitialize() {
         log(Level.INFO, "Initializing Custom Spawns...");
+        
+        // Add custom spawns
+        CustomSpawnModifications.modifySpawns();
     }
 }
