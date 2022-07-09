@@ -14,7 +14,7 @@
     "entity.MixinHostileEntity",
     "entity.MixinWaterCreatureEntity",
     "entity.MixinAmbientEntity",
-    "entity.MixinHorseBaseEntity",
+    "entity.MixinAbstractHorseEntity",
     "entity.MixinPigEntity",
     "entity.MixinTameableEntity"
   ],

@@ -5,6 +5,7 @@
     "text.autoconfig.customspawn.category.persistence": "Mob Persistence",
     "text.autoconfig.customspawn.category.mobSpawnAdditions": "Mob Additions",
     "text.autoconfig.customspawn.category.mobSpawnRemovals": "Mob Removals",
+    "text.autoconfig.customspawn.category.mobSpawnReplacements": "Mob Replacements",
     "text.autoconfig.customspawn.category.spawners": "Mob Spawners",
     
     "text.autoconfig.customspawn.option.chunkConstant.@PrefixText": "Actual Mob Cap = Mob Cap * Chunks / (Chunk Constant ^ 2)",
@@ -79,6 +80,17 @@
     "text.autoconfig.customspawn.option.CustomSpawnRemoval": "Mob Removal",
     "text.autoconfig.customspawn.option.CustomSpawnRemoval.biomeId": "Biome ID",
     "text.autoconfig.customspawn.option.CustomSpawnRemoval.mobId": "Mob ID",
+    
+    "text.autoconfig.customspawn.option.mobSpawnReplacements": "Mob Replacements",
+    "text.autoconfig.customspawn.option.mobSpawnReplacements.@PrefixText": "Changes require game restart.",
+    "text.autoconfig.customspawn.option.CustomSpawnReplacement": "Mob Replacement",
+    "text.autoconfig.customspawn.option.CustomSpawnReplacement.biomeId": "Biome ID",
+    "text.autoconfig.customspawn.option.CustomSpawnReplacement.originalMobId": "Original Mob ID",
+    "text.autoconfig.customspawn.option.CustomSpawnReplacement.replacementSpawnGroup": "Replacement Spawn Group",
+    "text.autoconfig.customspawn.option.CustomSpawnReplacement.replacementMobId": "Replacement Mob ID",
+    "text.autoconfig.customspawn.option.CustomSpawnReplacement.replacementWeight": "Replacement Weight",
+    "text.autoconfig.customspawn.option.CustomSpawnReplacement.replacementMinCount": "Replacement Min Count",
+    "text.autoconfig.customspawn.option.CustomSpawnReplacement.replacementMaxCount": "Replacement Max Count",
     
     "text.autoconfig.customspawn.option.overrideSpawnerDefaultValues.@PrefixText": "Changes require world reload.",
     "text.autoconfig.customspawn.option.overrideSpawnerDefaultValues": "Override Mob Spawner Default Values",

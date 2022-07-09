@@ -25,7 +25,15 @@ public class CustomSpawnModifications {
                     ModificationPhase.ADDITIONS,
                     BiomeSelectors.includeByKey(biomeKey(addition.biomeId)),
                     context -> {
-                        CustomSpawn.log(Level.INFO, String.format("Adding mob '%s' to biome '%s'", addition.mobId, addition.biomeId));
+                        CustomSpawn.log(Level.INFO, String.format(
+                            "Adding mob '%s' to biome '%s', to group '%s' with weight %d, min count %d, and max count %d",
+                            addition.mobId,
+                            addition.biomeId,
+                            addition.spawnGroup.asString(),
+                            addition.weight,
+                            addition.minCount,
+                            addition.maxCount
+                        ));
                         
                         context.getSpawnSettings().addSpawn(
                             addition.spawnGroup,
@@ -47,10 +55,49 @@ public class CustomSpawnModifications {
                     ModificationPhase.REMOVALS,
                     BiomeSelectors.includeByKey(biomeKey(removal.biomeId)),
                     context -> {
-                        CustomSpawn.log(Level.INFO, String.format("Removing mob '%s' from biome '%s'", removal.mobId, removal.biomeId));
+                        CustomSpawn.log(Level.INFO, String.format(
+                            "Removing mob '%s' from biome '%s'",
+                            removal.mobId,
+                            removal.biomeId
+                        ));
                         
                         context.getSpawnSettings().removeSpawnsOfEntityType(
                             Registry.ENTITY_TYPE.get(entityKey(removal.mobId))
+                        );
+                    }
+                );
+        });
+        
+        config.mobSpawnReplacements.forEach(replacement -> {
+            BiomeModifications
+                .create(CustomSpawn.createId(Integer.toString(replacement.hashCode())))
+                .add(
+                    ModificationPhase.REPLACEMENTS,
+                    BiomeSelectors.includeByKey(biomeKey(replacement.biomeId)),
+                    context -> {
+                        CustomSpawn.log(Level.INFO, String.format(
+                            "Replacing mob '%s' from biome '%s', with mob '%s', to group '%s' with weight '%d', min count '%d', and max count '%d'",
+                            replacement.originalMobId,
+                            replacement.biomeId,
+                            replacement.replacementMobId,
+                            replacement.replacementSpawnGroup.asString(),
+                            replacement.replacementWeight,
+                            replacement.replacementMinCount,
+                            replacement.replacementMaxCount
+                        ));
+                        
+                        context.getSpawnSettings().removeSpawnsOfEntityType(
+                            Registry.ENTITY_TYPE.get(entityKey(replacement.originalMobId))
+                        );
+                        
+                        context.getSpawnSettings().addSpawn(
+                            replacement.replacementSpawnGroup,
+                            new SpawnSettings.SpawnEntry(
+                                Registry.ENTITY_TYPE.get(entityKey(replacement.replacementMobId)),
+                                replacement.replacementWeight,
+                                replacement.replacementMinCount,
+                                replacement.replacementMaxCount
+                            )
                         );
                     }
                 );

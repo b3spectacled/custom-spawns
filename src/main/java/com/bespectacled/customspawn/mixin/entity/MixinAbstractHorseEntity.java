@@ -7,14 +7,14 @@ import com.bespectacled.customspawn.CustomSpawn;
 
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.HorseBaseEntity;
+import net.minecraft.entity.passive.AbstractHorseEntity;
 
-@Mixin(HorseBaseEntity.class)
-public class MixinHorseBaseEntity extends MobEntity {
+@Mixin(AbstractHorseEntity.class)
+public class MixinAbstractHorseEntity extends MobEntity {
     @Shadow
     private static TrackedData<Byte> HORSE_FLAGS;
     
-    protected MixinHorseBaseEntity() {
+    protected MixinAbstractHorseEntity() {
         super(null, null);
     }
     

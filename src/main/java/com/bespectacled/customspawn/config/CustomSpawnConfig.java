@@ -65,6 +65,10 @@ public class CustomSpawnConfig implements ConfigData {
     public List<CustomSpawnRemoval> mobSpawnRemovals = List.of();
     
     @ConfigEntry.Gui.PrefixText
+    @ConfigEntry.Category(value = "mobSpawnReplacements")
+    public List<CustomSpawnReplacement> mobSpawnReplacements = List.of();
+    
+    @ConfigEntry.Gui.PrefixText
     @ConfigEntry.Category(value = "spawners")
     public boolean overrideSpawnerDefaultValues = false;
     
@@ -133,6 +137,28 @@ public class CustomSpawnConfig implements ConfigData {
         public CustomSpawnRemoval() {
             this.biomeId = "minecraft:plains";
             this.mobId = "minecraft:pig";
+        }
+    }
+    
+    public static class CustomSpawnReplacement {
+        public String biomeId;
+        public String originalMobId;
+        
+        public String replacementMobId;
+        public SpawnGroup replacementSpawnGroup;
+        public int replacementWeight;
+        public int replacementMinCount;
+        public int replacementMaxCount;
+        
+        public CustomSpawnReplacement() {
+            this.biomeId = "minecraft:plains";
+            this.originalMobId = "minecraft:pig";
+            
+            this.replacementMobId = "minecraft:pig";
+            this.replacementSpawnGroup = SpawnGroup.CREATURE;
+            this.replacementWeight = 10;
+            this.replacementMinCount = 4;
+            this.replacementMaxCount = 4;
         }
     }
 }
