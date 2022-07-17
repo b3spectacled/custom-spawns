@@ -108,7 +108,7 @@ public class CustomSpawnConfig implements ConfigData {
     public static class CustomSpawnAddition {
         public String biomeId;
         public String mobId;
-        public SpawnGroup spawnGroup;
+        public String spawnGroup;
         public int weight;
         public int minCount;
         public int maxCount;
@@ -116,7 +116,7 @@ public class CustomSpawnConfig implements ConfigData {
         public CustomSpawnAddition() {
             this.biomeId = "minecraft:plains";
             this.mobId = "minecraft:pig";
-            this.spawnGroup = SpawnGroup.CREATURE;
+            this.spawnGroup = SpawnGroup.CREATURE.getName();
             this.weight = 10;
             this.minCount = 4;
             this.maxCount = 4;

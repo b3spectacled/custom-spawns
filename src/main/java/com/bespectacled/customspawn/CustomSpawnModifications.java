@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
@@ -28,7 +29,7 @@ public class CustomSpawnModifications {
                         CustomSpawn.log(Level.INFO, String.format("Adding mob '%s' to biome '%s'", addition.mobId, addition.biomeId));
                         
                         context.getSpawnSettings().addSpawn(
-                            addition.spawnGroup,
+                            SpawnGroup.byName(addition.spawnGroup.toLowerCase()),
                             new SpawnSettings.SpawnEntry(
                                 Registry.ENTITY_TYPE.get(entityKey(addition.mobId)),
                                 addition.weight,
