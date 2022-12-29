@@ -1,6 +1,6 @@
 package com.bespectacled.customspawn;
 
-import org.apache.logging.log4j.Level;
+import org.slf4j.event.Level;
 
 import com.bespectacled.customspawn.config.CustomSpawnConfig;
 
@@ -8,9 +8,10 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
 import net.minecraft.entity.EntityType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.SpawnSettings;
 
@@ -38,7 +39,7 @@ public class CustomSpawnModifications {
                         context.getSpawnSettings().addSpawn(
                             addition.spawnGroup,
                             new SpawnSettings.SpawnEntry(
-                                Registry.ENTITY_TYPE.get(entityKey(addition.mobId)),
+                                Registries.ENTITY_TYPE.get(entityKey(addition.mobId)),
                                 addition.weight,
                                 addition.minCount,
                                 addition.maxCount
@@ -62,7 +63,7 @@ public class CustomSpawnModifications {
                         ));
                         
                         context.getSpawnSettings().removeSpawnsOfEntityType(
-                            Registry.ENTITY_TYPE.get(entityKey(removal.mobId))
+                            Registries.ENTITY_TYPE.get(entityKey(removal.mobId))
                         );
                     }
                 );
@@ -87,13 +88,13 @@ public class CustomSpawnModifications {
                         ));
                         
                         context.getSpawnSettings().removeSpawnsOfEntityType(
-                            Registry.ENTITY_TYPE.get(entityKey(replacement.originalMobId))
+                            Registries.ENTITY_TYPE.get(entityKey(replacement.originalMobId))
                         );
                         
                         context.getSpawnSettings().addSpawn(
                             replacement.replacementSpawnGroup,
                             new SpawnSettings.SpawnEntry(
-                                Registry.ENTITY_TYPE.get(entityKey(replacement.replacementMobId)),
+                                Registries.ENTITY_TYPE.get(entityKey(replacement.replacementMobId)),
                                 replacement.replacementWeight,
                                 replacement.replacementMinCount,
                                 replacement.replacementMaxCount
@@ -105,10 +106,10 @@ public class CustomSpawnModifications {
     }
     
     private static RegistryKey<Biome> biomeKey(String id) {
-        return RegistryKey.of(Registry.BIOME_KEY, new Identifier(id));
+        return RegistryKey.of(RegistryKeys.BIOME, new Identifier(id));
     }
     
     private static RegistryKey<EntityType<?>> entityKey(String id) {
-        return RegistryKey.of(Registry.ENTITY_TYPE_KEY, new Identifier(id));
+        return RegistryKey.of(RegistryKeys.ENTITY_TYPE, new Identifier(id));
     }
 }

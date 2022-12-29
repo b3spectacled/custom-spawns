@@ -1,8 +1,8 @@
 package com.bespectacled.customspawn;
 
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.event.Level;
 
 import com.bespectacled.customspawn.config.CustomSpawnConfig;
 
@@ -17,10 +17,17 @@ public class CustomSpawn implements ModInitializer {
     
     public static final CustomSpawnConfig SPAWNS_CONFIG = AutoConfig.register(CustomSpawnConfig.class, GsonConfigSerializer::new).getConfig();
     
-    private static final Logger LOGGER = LogManager.getLogger("CustomSpawns");
+    private static final Logger LOGGER = LoggerFactory.getLogger("CustomSpawns");
 
     public static void log(Level level, String message) {
-        LOGGER.log(level, "[" + MOD_NAME + "] {}", message);
+        message = String.format("[%s] %s", MOD_NAME, message);
+        
+        switch(level) {
+            case DEBUG: LOGGER.debug(message);
+            case ERROR: LOGGER.error(message);
+            case WARN: LOGGER.warn(message);
+            default: LOGGER.info(message);
+        }
     }
     
     public static Identifier createId(String name) {
