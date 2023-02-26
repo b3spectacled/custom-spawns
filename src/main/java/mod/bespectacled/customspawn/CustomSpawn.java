@@ -1,13 +1,12 @@
-package com.bespectacled.customspawn;
+package mod.bespectacled.customspawn;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.event.Level;
 
-import com.bespectacled.customspawn.config.CustomSpawnConfig;
-
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import mod.bespectacled.customspawn.config.CustomSpawnConfig;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 
@@ -20,14 +19,7 @@ public class CustomSpawn implements ModInitializer {
     private static final Logger LOGGER = LoggerFactory.getLogger("CustomSpawns");
 
     public static void log(Level level, String message) {
-        message = String.format("[%s] %s", MOD_NAME, message);
-        
-        switch(level) {
-            case DEBUG: LOGGER.debug(message);
-            case ERROR: LOGGER.error(message);
-            case WARN: LOGGER.warn(message);
-            default: LOGGER.info(message);
-        }
+        LOGGER.atLevel(level).log("[" + MOD_NAME + "] {}", message);
     }
     
     public static Identifier createId(String name) {

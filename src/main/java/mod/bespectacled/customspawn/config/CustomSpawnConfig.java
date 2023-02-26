@@ -1,4 +1,4 @@
-package com.bespectacled.customspawn.config;
+package mod.bespectacled.customspawn.config;
 
 import java.util.List;
 
@@ -114,6 +114,7 @@ public class CustomSpawnConfig implements ConfigData {
     
     public static class CustomSpawnAddition {
         public String biomeId;
+        public String biomeTag;
         public String mobId;
         public SpawnGroup spawnGroup;
         public int weight;
@@ -122,6 +123,7 @@ public class CustomSpawnConfig implements ConfigData {
         
         public CustomSpawnAddition() {
             this.biomeId = "minecraft:plains";
+            this.biomeTag = "";
             this.mobId = "minecraft:pig";
             this.spawnGroup = SpawnGroup.CREATURE;
             this.weight = 10;
@@ -132,16 +134,19 @@ public class CustomSpawnConfig implements ConfigData {
     
     public static class CustomSpawnRemoval {
         public String biomeId;
+        public String biomeTag;
         public String mobId;
         
         public CustomSpawnRemoval() {
             this.biomeId = "minecraft:plains";
+            this.biomeTag = "";
             this.mobId = "minecraft:pig";
         }
     }
     
     public static class CustomSpawnReplacement {
         public String biomeId;
+        public String biomeTag;
         public String originalMobId;
         
         public String replacementMobId;
@@ -152,6 +157,7 @@ public class CustomSpawnConfig implements ConfigData {
         
         public CustomSpawnReplacement() {
             this.biomeId = "minecraft:plains";
+            this.biomeTag = "";
             this.originalMobId = "minecraft:pig";
             
             this.replacementMobId = "minecraft:pig";

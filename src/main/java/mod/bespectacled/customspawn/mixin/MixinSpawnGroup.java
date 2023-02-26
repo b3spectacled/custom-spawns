@@ -1,4 +1,4 @@
-package com.bespectacled.customspawn.mixin;
+package mod.bespectacled.customspawn.mixin;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,9 +11,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.bespectacled.customspawn.CustomSpawn;
-import com.bespectacled.customspawn.config.CustomSpawnConfig.CustomSpawnGroup;
-
+import mod.bespectacled.customspawn.CustomSpawn;
+import mod.bespectacled.customspawn.config.CustomSpawnConfig.CustomSpawnGroup;
 import net.minecraft.entity.SpawnGroup;
 
 @Mixin(SpawnGroup.class)

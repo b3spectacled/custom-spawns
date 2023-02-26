@@ -1,12 +1,11 @@
-package com.bespectacled.customspawn.mixin;
+package mod.bespectacled.customspawn.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import com.bespectacled.customspawn.CustomSpawn;
-
+import mod.bespectacled.customspawn.CustomSpawn;
 import net.minecraft.server.world.ServerChunkManager;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.SpawnHelper;

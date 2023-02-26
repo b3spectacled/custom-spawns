@@ -1,4 +1,4 @@
-package com.bespectacled.customspawn.mixin;
+package mod.bespectacled.customspawn.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -6,9 +6,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.bespectacled.customspawn.CustomSpawn;
-
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
+import mod.bespectacled.customspawn.CustomSpawn;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.SpawnDensityCapper;

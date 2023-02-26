@@ -1,4 +1,4 @@
-package com.bespectacled.customspawn.config;
+package mod.bespectacled.customspawn.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;

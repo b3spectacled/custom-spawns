@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.bespectacled.customspawn.CustomSpawn"
+      "mod.bespectacled.customspawn.CustomSpawn"
     ],
     "modmenu": [
-      "com.bespectacled.customspawn.config.CustomSpawnModMenu"
+      "mod.bespectacled.customspawn.config.CustomSpawnModMenu"
     ]
   },
   "mixins": [
